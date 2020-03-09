@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <EditText
+        android:id="@+id/etName"
+        android:hint="input name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></EditText>
+
+    <EditText
+        android:id="@+id/etPrice"
+        android:hint="input price"
+        android:layout_below="@id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></EditText>
+    <Button
+        android:layout_marginLeft="100dp"
+        android:id="@+id/btnEdit"
+        android:text="Edit"
+        android:layout_below="@id/etPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:text="Cancel"
+        android:layout_toRightOf="@id/btnEdit"
+        android:layout_below="@id/etPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Button>
+    <ListView
+        android:id="@+id/lvFood"
+        android:layout_below="@id/btnEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ></ListView>
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lvFood"
+        android:text="Book Order">
+    </Button>
+</RelativeLayout>
