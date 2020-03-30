@@ -20,65 +20,74 @@
 
     <EditText
         android:id="@+id/etMaSV"
-        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input MaSV"
         android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/etName"
-        tools:layout_editor_absoluteX="0dp"></EditText>
+        android:hint="Input MaSV"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etName"></EditText>
 
     <EditText
         android:id="@+id/etDTB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Input Diem TB"
         android:gravity="center"
+        android:hint="Input Diem TB"
         android:inputType="numberDecimal"
-        app:layout_constraintTop_toBottomOf="@+id/etMaSV"
-        tools:layout_editor_absoluteX="16dp"></EditText>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etMaSV"></EditText>
 
     <LinearLayout
         android:id="@+id/groupBtn"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etDTB">
-
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add" ></Button>
 
         <Button
             android:id="@+id/btnShow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show" ></Button>
+            android:text="Show"></Button>
 
         <Button
-            android:id="@+id/btnDeleteAll"
+            android:id="@+id/btnAdd"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Delete All" ></Button>
+            android:text="Add"></Button>
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/lv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/groupBtn">
 
         <ListView
             android:id="@+id/lvSinhVien"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            />
+            android:layout_height="300dp"
+            android:layout_gravity="center" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
